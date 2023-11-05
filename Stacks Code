@@ -1,0 +1,40 @@
+array = [""for x in range(10)]
+
+basep = 0
+topp = 0
+stacklen = 10
+
+
+def push(data):
+
+    global array,basep,topp,stacklen
+
+    if topp < stacklen:
+        print("The stack/array is not full")
+        array[topp] = data
+        topp = topp + 1
+
+    else:
+        print("Stack/Array is full")
+
+def pop():
+
+    global array,basep,topp,stacklen
+
+    if topp >= basep:
+        print("Stack/Array is not empty")
+        topp = topp - 1
+        array[topp] = ""
+        
+
+    else:
+        print("The Stack/Array is empty")
+
+
+def output():
+    global topp,basep,stacklen
+    x = basep
+    while x != topp:
+        print(array[x])
+        x = x + 1
+        
